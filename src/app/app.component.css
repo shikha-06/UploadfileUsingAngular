@@ -1,0 +1,24 @@
+.FileHeading{
+    text-align: center;
+    font-size: xx-large;
+    background-color: lightgray;
+    padding: 50px;
+    font-weight: bolder;
+}
+body{
+    background-color:skyblue;
+    height:90dvh;
+    text-align: center;
+}
+#Uploadbtn{
+    padding: 10px;
+    background-color: gray;
+    color: white;
+    font-weight: bold;
+    margin-left: 100px;
+    
+}
+h2{
+    margin-right: 150px;
+    font-size: larger;
+}

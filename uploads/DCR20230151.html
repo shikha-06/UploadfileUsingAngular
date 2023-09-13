@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>DCR20230151</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+<style>
+    table,
+    th,
+    td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        font-size: xx-small;
+    }	
+    @media print {
+  table {page-break-after: always;}
+#srNo{width:0% !important;}
+
+}
+</style>
+</head>
+<body >
+<center class="m_-6972274691570630070wrapper_app" >
+    <table style="width:100%">
+        <tr>
+            <td colspan="9" style="font-size: large; text-align: center;"><b>Delivery Challan</b></td>
+            <td   colspan="2" style=" text-align: center">Original Copy</td>
+        </tr>
+        <tr>
+            <td colspan="1"><img src="data:image/png;base64,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" alt="Atlas-Copco-Logo.jpg" style="width:100px; height:50px"></td>
+            <td colspan="5">
+                <b>Atlas Copco (India) Private Ltd.,<br>
+                    Gas & Process Applications,<br>
+                    Address: Block- D/1, Plot no 24,Opp Bird Valley Garden, Telco Road, MIDCChinchwad, Pune-411019,
+                    Maharashtra, India
+                    <br>
+                    GST NO: 27AAACA4074D1Z2
+                </b>
+            </td>
+            <td colspan="3" style= "font-size:12px">
+                <b>
+Delivery No DCR20230151
+               <br>
+                    Doc Date: 17-08-2023<br>
+                </b>
+            </td>
+            <td  colspan="2" style= "text-align: left">
+                <b>
+                    <u>Type of DC</u><br>
+                    JOB Work-Returnable
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b><u>Bill To: </u></b><br>
+BHARAT ENGINEERING INDUSTRIES
+<br>
+ ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN<br>
+                GST No.: 27AMMPM3311J1ZZ
+            </td>
+            <td colspan="4">
+                <b><u>Ship To: </u></b><br>
+BHARAT ENGINEERING INDUSTRIES<br>
+ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN<br>
+                GST No.: 27AMMPM3311J1ZZ
+            </td>
+            <td colspan="3">
+                <b>
+                    <u>OUR GST: </u><br>
+                    27AAACA4074D1Z2
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1" style="width:50px;"><b>Payer:</b></td>
+            <td colspan="10">BHARAT ENGINEERING INDUSTRIES, ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN,GST No.: 27AMMPM3311J1ZZ</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b>WBS/SO :</b> D.62000071<br>
+                <b>Exp Return Date :</b>31-08-2023 <br>
+  <b>Doc No. :</b> NA<br>
+            </td>
+            <td colspan="5"><b><u>Shipper Details</u></b><br>
+                <b>Contact Name :</b> Sanjay Tuljanawar<br>
+                <b>Mail ID : sanjay.tuljanawar@atlascopco.com</b> <br>
+            </td>
+            <td colspan="4">
+                Customer Information<br>
+                Contact Name : <br>
+                Tel No. 9822638586<br>
+                E-Mail : Bharat<br>
+            </td>
+        </tr>
+        <!--For Material-->
+        <tr>
+             <th style="width:0% !important;" id="srNo">SR.NO</th>
+            <th tyle= "width:12%">Part Number</th>
+            <th colspan="2" tyle= "width:0%">Part Description</th>
+            <th tyle= "width:10%">HSN/SAC Code</th>
+            <th style= "width:10%">Qty</th>
+            <th style= "width:10%">UOM</th>
+            <th style= "width:10%">Price/unit</th>
+            <th style= "width:20%">GST(18 %)</th>
+            <th style= "width:20%">Total cost</th>
+            <th>Price</th>
+        </tr>
+   <tr>
+            <td style= "text-align: center;width:0% !important;" id="srNo">1</td>
+            <td style= "text-align: center;width:12%">NA</td>
+            <td colspan="2"  style= "width:0%">MS plates</td>
+            <td style= "text-align: center;width:10%">84144000</td>
+            <td style= "text-align: center;width:10%">8</td>
+            <td  style="text-align: center;width:10%">Nos</td>
+            <td style= "text-align: center;width:10%">200.00</td>
+            <td style= "text-align: right;width:20%">288.00</td>
+            <td style= "text-align: right;width:20%">1,888.00</td>
+            <td style= "text-align: right;">INR</td>
+        </tr>
+        <tr>
+            <td colspan="8"></td>
+            <td><b>Grand Total</b></td>
+            <td style= "text-align: right;"><b>1,888.00</b></td>
+            <td style= "text-align: right;"><b>INR</b></td>
+        </tr>
+        <!--7th row for Total in wards-->
+        <tr>
+            <td colspan="11"><b>Total Amount in ( INR ) : <br>
+                    Total SGST/CGST: <br>
+                    <br>
+                    Payment terms : Nil<br>
+                    Inco terms : DDP<br>
+                    Place of Supply : Pune<br>
+                    <br>
+                    <u>Remarks : </u> </b><br>
+            </td>
+<br/>
+        </tr>
+<tr ><td colspan="11"> <br/><br/><br/></td></tr>
+        <!--8th row for Company Details-->
+        <tr>
+            <td colspan="11">Penal Interest at the rate 20% will be payable by the customer for all payments made after
+                the due date.
+                No claims recognised unless reported in writing to company within 14 days from date of receipt of goods.
+                In the event of the certificate furnised / to be furnished by you being help invalid for once reason or
+                the other by GST authorized we shall recover from you the balance of tax involved.
+                <br>
+                <br>
+                Please quote the invoice no & date with your remittance to ensure that proceeds are correctly credited
+                to you. Send advice of payment to collections.domestic@atlascopco.com For foreign remittance
+                collections.foreign@atlascopco.com
+                <br>
+                <br>
+                <b>
+                    Certified that the particular's given above are true & correct & the amount indicated represents the
+                    price actually charged & that there is no flow of additional consideration directly or indirectly
+                    from the buyer.
+                    <br>
+                    <br>
+                    Subject to Pune Jurisdiction only
+                </b>
+            </td>
+        </tr>
+        <!--9th row for Company signature and stamps-->
+        <tr>
+            <td colspan="3"><br>
+                <br>
+                <br>
+                <br>
+                <b>Receiver Signature& stamp</b>
+            </td>
+            <td colspan="8"><br>
+                <br>
+                <br>
+                <br>
+                <b>For ATLAS COPCO (INDIA) Private LTD. Authorised Signatory &Stamp</b>
+            </td>
+        </tr>
+        <!--10th row for Company address and Bank details-->
+        <tr>
+            <td colspan="2"><b>Registered Office: <br>
+                    Atlas Copco (India) Private Ltd. Sveanagar,Dapodi
+                    Maharashtra,Pune-411012</b></td>
+            <td colspan="2"><b>Landline : 020 3985 2100<br>
+                    Visit us at:
+                    http://www.atlascopco.com/en-in<br>
+                    Email:</b></td>
+            <td colspan="4"><b>Invoice From:<br>
+                    Atlas Copco (India) Private Ltd.,
+                    Gas & Process Applications,<br>
+                    Address: Block- D/1, Plot no 24,Opp Bird Valley Garden, Telco Road, MIDCChinchwad, Pune-411019,
+                    Maharashtra, India</b></td>
+            <td colspan="3"><b>
+                    Bank Name: Deutsche Bank <br>
+                    Bank Account No: 6000863008 <br>
+                    IFSC Code: DEUT0537PUN <br>
+                    Currency: INR <br>
+                </b></td>
+        </tr>
+    </table>
+    <table style="width:100%">
+        <tr>
+            <td colspan="9" style="font-size: large; text-align: center;"><b>Delivery Challan</b></td>
+            <td  colspan="2" style=" text-align: center">Duplicate Copy</td>
+        </tr>
+        <tr>
+            <td colspan="1"><img src="data:image/png;base64,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" alt="Atlas-Copco-Logo.jpg" style="width:100px; height:50px"></td>
+            <td colspan="5">
+                <b>Atlas Copco (India) Private Ltd.,<br>
+                    Gas & Process Applications,<br>
+                    Address: Block- D/1, Plot no 24,Opp Bird Valley Garden, Telco Road, MIDCChinchwad, Pune-411019,
+                    Maharashtra, India
+                    <br>
+                    GST NO: 27AAACA4074D1Z2
+                </b>
+            </td>
+            <td colspan="3" style= "font-size:12px">
+                <b>
+Delivery No DCR20230151
+               <br>
+                   Doc Date: 17-08-2023<br>
+                </b>
+            </td>
+            <td colspan="2" style= "text-align: left">
+                <b>
+                    <u>Type of DC</u><br>
+                    JOB Work-Returnable
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b><u>Bill To: </u></b><br>
+BHARAT ENGINEERING INDUSTRIES
+<br>
+ ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN<br>
+                GST No.: 27AMMPM3311J1ZZ
+            </td>
+            <td colspan="4">
+                <b><u>Ship To: </u></b><br>
+BHARAT ENGINEERING INDUSTRIES<br>
+ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN<br>
+                GST No.: 27AMMPM3311J1ZZ
+            </td>
+            <td colspan="3">
+                <b>
+                    <u>OUR GST: </u><br>
+                    27AAACA4074D1Z2
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1"><b>Payer:</b></td>
+            <td colspan="10">BHARAT ENGINEERING INDUSTRIES, ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN,GST No.: 27AMMPM3311J1ZZ</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b>WBS/SO :</b> D.62000071<br>
+                <b>Exp Return Date :</b>31-08-2023 <br>
+  <b>Doc No. :</b> NA<br>
+            </td>
+            <td colspan="5"><b><u>Shipper Details</u></b><br>
+                <b>Contact Name :</b> Sanjay Tuljanawar<br>
+                <b>Mail ID : sanjay.tuljanawar@atlascopco.com</b> <br>
+            </td>
+            <td colspan="4">
+                Customer Information<br>
+                Contact Name : <br>
+                Tel No. 9822638586<br>
+                E-Mail : Bharat<br>
+            </td>
+        </tr>
+        <!--For Material-->
+        <tr>
+            <th style="width:1%">SR.NO</th>
+            <th>Part Number</th>
+            <th colspan="2">Part Description</th>
+            <th>HSN/SAC Code</th>
+            <th>Qty</th>
+            <th>UOM</th>
+            <th>Price/unit</th>
+            <th>GST(18 %)</th>
+            <th>Total cost</th>
+            <th>Price</th>
+        </tr>
+   <tr>
+            <td style= "text-align: center;width:0% !important;" id="srNo">1</td>
+            <td style= "text-align: center;width:12%">NA</td>
+            <td colspan="2"  style= "width:0%">MS plates</td>
+            <td style= "text-align: center;width:10%">84144000</td>
+            <td style= "text-align: center;width:10%">8</td>
+            <td  style="text-align: center;width:10%">Nos</td>
+            <td style= "text-align: center;width:10%">200.00</td>
+            <td style= "text-align: right;width:20%">288.00</td>
+            <td style= "text-align: right;width:20%">1,888.00</td>
+            <td style= "text-align: right;">INR</td>
+        </tr>
+        <tr>
+            <td colspan="8"></td>
+            <td><b>Grand Total</b></td>
+            <td style= "text-align: right;"><b>1888</b></td>
+            <td style= "text-align: right;"><b>INR</b></td>
+        </tr>
+        <!--7th row for Total in wards-->
+        <tr>
+            <td colspan="11"><b>Total Amount in ( INR ) : <br>
+                    Total SGST/CGST: <br>
+                    <br>
+                    Payment terms : Nil<br>
+                    Inco terms : DDP<br>
+                    Place of Supply : Pune<br>
+                    <br>
+                    <u>Remarks : </u> </b><br>
+            </td>
+<br/>
+        </tr>
+<tr ><td colspan="11"> <br/><br/><br/></td></tr>
+        <!--8th row for Company Details-->
+        <tr>
+            <td colspan="11">Penal Interest at the rate 20% will be payable by the customer for all payments made after
+                the due date.
+                No claims recognised unless reported in writing to company within 14 days from date of receipt of goods.
+                In the event of the certificate furnised / to be furnished by you being help invalid for once reason or
+                the other by GST authorized we shall recover from you the balance of tax involved.
+                <br>
+                <br>
+                Please quote the invoice no & date with your remittance to ensure that proceeds are correctly credited
+                to you. Send advice of payment to collections.domestic@atlascopco.com For foreign remittance
+                collections.foreign@atlascopco.com
+                <br>
+                <br>
+                <b>
+                    Certified that the particular's given above are true & correct & the amount indicated represents the
+                    price actually charged & that there is no flow of additional consideration directly or indirectly
+                    from the buyer.
+                    <br>
+                    <br>
+                    Subject to Pune Jurisdiction only
+                </b>
+            </td>
+        </tr>
+        <!--9th row for Company signature and stamps-->
+        <tr>
+            <td colspan="3"><br>
+                <br>
+                <br>
+                <br>
+                <b>Receiver Signature& stamp</b>
+            </td>
+            <td colspan="8"><br>
+                <br>
+                <br>
+                <br>
+                <b>For ATLAS COPCO (INDIA) Private LTD. Authorised Signatory &Stamp</b>
+            </td>
+        </tr>
+        <!--10th row for Company address and Bank details-->
+        <tr>
+            <td colspan="2"><b>Registered Office: <br>
+                    Atlas Copco (India) Private Ltd. Sveanagar,Dapodi
+                    Maharashtra,Pune-411012</b></td>
+            <td colspan="2"><b>Landline : 020 3985 2100<br>
+                    Visit us at:
+                    http://www.atlascopco.com/en-in<br>
+                    Email:</b></td>
+            <td colspan="4"><b>Invoice From:<br>
+                    Atlas Copco (India) Private Ltd.,
+                    Gas & Process Applications,<br>
+                    Address: Block- D/1, Plot no 24,Opp Bird Valley Garden, Telco Road, MIDCChinchwad, Pune-411019,
+                    Maharashtra, India</b></td>
+            <td colspan="3"><b>
+                    Bank Name: Deutsche Bank <br>
+                    Bank Account No: 6000863008 <br>
+                    IFSC Code: DEUT0537PUN <br>
+                    Currency: INR <br>
+                </b></td>
+        </tr>
+    </table>
+    <table style="width:100%">
+        <tr>
+            <td colspan="9" style="font-size: large; text-align: center;"><b>Delivery Challan</b></td>
+            <td colspan="2"style=" text-align: center">Triplicate Copy</td>
+        </tr>
+        <tr>
+            <td colspan="1"><img src="data:image/png;base64,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" alt="Atlas-Copco-Logo.jpg" style="width:100px; height:50px"></td>
+            <td colspan="5">
+                <b>Atlas Copco (India) Private Ltd.,<br>
+                    Gas & Process Applications,<br>
+                    Address: Block- D/1, Plot no 24,Opp Bird Valley Garden, Telco Road, MIDCChinchwad, Pune-411019,
+                    Maharashtra, India
+                    <br>
+                    GST NO: 27AAACA4074D1Z2
+                </b>
+            </td>
+            <td colspan="3" style= "font-size:12px">
+                <b>
+Delivery No DCR20230151
+               <br>
+                        Doc Date: 17-08-2023<br>
+                </b>
+            </td>
+            <td colspan="2" style= "text-align: left">
+                <b>
+                    <u>Type of DC</u><br>
+                    JOB Work-Returnable
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <b><u>Bill To: </u></b><br>
+BHARAT ENGINEERING INDUSTRIES
+<br>
+ ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN<br>
+                GST No.: 27AMMPM3311J1ZZ
+            </td>
+            <td colspan="4">
+                <b><u>Ship To: </u></b><br>
+BHARAT ENGINEERING INDUSTRIES<br>
+ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN<br>
+                GST No.: 27AMMPM3311J1ZZ
+            </td>
+            <td colspan="3">
+                <b>
+                    <u>OUR GST: </u><br>
+                    27AAACA4074D1Z2
+                </b>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="1"><b>Payer:</b></td>
+            <td colspan="10">BHARAT ENGINEERING INDUSTRIES, ROW HOUSE NO:- E-1, ANTRIKSH ROAD, PUNE, 411018, IN,GST No.: 27AMMPM3311J1ZZ</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <b>WBS/SO :</b> D.62000071<br>
+                <b>Exp Return Date :</b>31-08-2023 <br>
+  <b>Doc No. :</b> NA<br>
+            </td>
+            <td colspan="5"><b><u>Shipper Details</u></b><br>
+                <b>Contact Name :</b> Sanjay Tuljanawar<br>
+                <b>Mail ID : sanjay.tuljanawar@atlascopco.com</b> <br>
+            </td>
+            <td colspan="4">
+                Customer Information<br>
+                Contact Name : BHARAT ENGINEERING INDUSTRIES<br>
+                Tel No. 9822638586<br>
+                E-Mail : Bharat<br>
+            </td>
+        </tr>
+        <!--For Material-->
+        <tr>
+            <th style="width:1%">SR.NO</th>
+            <th>Part Number</th>
+            <th colspan="2">Part Description</th>
+            <th>HSN/SAC Code</th>
+            <th>Qty</th>
+            <th>UOM</th>
+            <th>Price/unit</th>
+            <th>GST(18 %)</th>
+            <th>Total cost</th>
+            <th>Price</th>
+        </tr>
+   <tr>
+            <td style= "text-align: center;width:0% !important;" id="srNo">1</td>
+            <td style= "text-align: center;width:12%">NA</td>
+            <td colspan="2"  style= "width:0%">MS plates</td>
+            <td style= "text-align: center;width:10%">84144000</td>
+            <td style= "text-align: center;width:10%">8</td>
+            <td  style="text-align: center;width:10%">Nos</td>
+            <td style= "text-align: center;width:10%">200.00</td>
+            <td style= "text-align: right;width:20%">288.00</td>
+            <td style= "text-align: right;width:20%">1,888.00</td>
+            <td style= "text-align: right;">INR</td>
+        </tr>
+        <tr>
+            <td colspan="8"></td>
+            <td><b>Grand Total</b></td>
+            <td style= "text-align: right;"><b>1888</b></td>
+            <td style= "text-align: right;"><b>INR</b></td>
+        </tr>
+        <!--7th row for Total in wards-->
+        <tr>
+            <td colspan="11"><b>Total Amount in ( INR ) : <br>
+                    Total SGST/CGST: <br>
+                    <br>
+                    Payment terms : Nil<br>
+                    Inco terms : DDP<br>
+                    Place of Supply : Pune<br>
+                    <br>
+                    <u>Remarks : </u> </b><br>
+            </td>
+<br/>
+        </tr>
+<tr ><td colspan="11"> <br/><br/><br/></td></tr>
+        <!--8th row for Company Details-->
+        <tr>
+            <td colspan="11">Penal Interest at the rate 20% will be payable by the customer for all payments made after
+                the due date.
+                No claims recognised unless reported in writing to company within 14 days from date of receipt of goods.
+                In the event of the certificate furnised / to be furnished by you being help invalid for once reason or
+                the other by GST authorized we shall recover from you the balance of tax involved.
+                <br>
+                <br>
+                Please quote the invoice no & date with your remittance to ensure that proceeds are correctly credited
+                to you. Send advice of payment to collections.domestic@atlascopco.com For foreign remittance
+                collections.foreign@atlascopco.com
+                <br>
+                <br>
+                <b>
+                    Certified that the particular's given above are true & correct & the amount indicated represents the
+                    price actually charged & that there is no flow of additional consideration directly or indirectly
+                    from the buyer.
+                    <br>
+                    <br>
+                    Subject to Pune Jurisdiction only
+                </b>
+            </td>
+        </tr>
+        <!--9th row for Company signature and stamps-->
+        <tr>
+            <td colspan="3"><br>
+                <br>
+                <br>
+                <br>
+                <b>Receiver Signature& stamp</b>
+            </td>
+            <td colspan="8"><br>
+                <br>
+                <br>
+                <br>
+                <b>For ATLAS COPCO (INDIA) Private  LTD. Authorised Signatory &Stamp</b>
+            </td>
+        </tr>
+        <!--10th row for Company address and Bank details-->
+        <tr>
+            <td colspan="2"><b>Registered Office: <br>
+                    Atlas Copco (India) Private Ltd. Sveanagar,Dapodi
+                    Maharashtra,Pune-411012</b></td>
+            <td colspan="2"><b>Landline : 020 3985 2100<br>
+                    Visit us at:
+                    http://www.atlascopco.com/en-in<br>
+                    Email:</b></td>
+            <td colspan="4"><b>Invoice From:<br>
+                    Atlas Copco (India) Private Ltd.,
+                    Gas & Process Applications,<br>
+                    Address: Block- D/1, Plot no 24,Opp Bird Valley Garden, Telco Road, MIDCChinchwad, Pune-411019,
+                    Maharashtra, India</b></td>
+            <td colspan="3"><b>
+                    Bank Name: Deutsche Bank <br>
+                    Bank Account No: 6000863008 <br>
+                    IFSC Code: DEUT0537PUN <br>
+                    Currency: INR <br>
+                </b></td>
+        </tr>
+    </table>
+</center>
+</body>
+</html>
